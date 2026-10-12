@@ -3,6 +3,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
+// Fix for corporate/proxy SSL certificate issues
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 import authRoutes from './routes/auth.js';
 import requestRoutes from './routes/requests.js';
 import categoryRoutes from './routes/categories.js';
